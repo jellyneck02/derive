@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    {% for derivehome in derivehome %}
+<div class ="container">
+    <div class="row">
+            <img class="mx-auto d-block mt-3" src="{% static derivehome.image%}">
+
+    </div>
+</div>
+    {% endfor %}
+
+{% endblock %}
+
+
+  <!---  <img src="{% static derivehome.image%}" >-->

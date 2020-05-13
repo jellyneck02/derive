@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+{% for derivebeer in derivebeer %}
+<div class ="container">
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <img class="img-thumbnail" src="{% static derivebeer.image%}">
+        </div>
+        <div class="col-md-6 mt-3">
+            <h2>{{ derivebeer.beer }}</h2>
+            <h5>{{ derivebeer.description }}</h5>
+        </div>
+    </div>
+</div>
+
+    {% endfor %}
+
+{% endblock %}
